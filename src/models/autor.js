@@ -65,7 +65,7 @@ class Autor {
   }
 
   static async pegaLivrosPorAutor(autorId) {
-    return db.select('livros')
+    return db.select('*').from('livros')
       .where({ autor_id: autorId });
   }
 }
