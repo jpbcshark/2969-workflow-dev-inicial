@@ -90,7 +90,7 @@ Para executar os testes:
 
 ## Como rodar a API
 
-O comando `sudo docker-compose up dev` já fará o processo de instalar e subir o servidor local da API em modo de desenvolvimento. Você deverá ver no terminal a seguinte mensagem:
+As dependências são instaladas durante a construção da imagem Docker. O comando `sudo docker-compose up dev` executa as migrações, carrega os dados iniciais e sobe o servidor local da API em modo de desenvolvimento. Você deverá ver no terminal a seguinte mensagem:
 
 ```
 Starting livraria_api_dev ... done
