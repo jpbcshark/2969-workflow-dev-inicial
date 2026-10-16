@@ -18,4 +18,4 @@ describe('Testando o modelo Evento', () => {
       expect.objectContaining(objetoEvento),
     );
   });
-})
+});
