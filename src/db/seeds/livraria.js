@@ -5,6 +5,7 @@
  */
 export async function seed(knex) {
   // Deletes ALL existing entries
+  await knex('eventos').del();
   await knex('livros').del();
   await knex('editoras').del();
   await knex('autores').del();
@@ -37,6 +38,14 @@ export async function seed(knex) {
       nome: 'Editora REST',
       cidade: 'Belo Brasília',
       email: 'ed@ed.com',
+    },
+  ]);
+  await knex('eventos').insert([
+    {
+      nome: 'Evento de teste',
+      descricao: 'Descrição do evento de teste',
+      data: '2023-01-01',
+      autor_id: 1,
     },
   ]);
   await knex('livros').insert([

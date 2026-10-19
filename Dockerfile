@@ -5,4 +5,4 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 USER node
-CMD npm install
+CMD ["npm", "run", "dev"]

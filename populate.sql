@@ -48,4 +48,18 @@ VALUES
    ('Os Despossuídos', 300, 2, 3),
    ('Memórias Póstumas de Brás Cubas', 150, 3, 4);
   
+CREATE TABLE eventos(
+  id          INTEGER NOT NULL PRIMARY KEY,
+  nome        TEXT    NOT NULL,
+  descricao   TEXT    NOT NULL,
+  data        TIMESTAMP NOT NULL,
+  autor_id    INTEGER NOT NULL,
+  created_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (autor_id) REFERENCES autores (id)
+);
+
+INSERT INTO eventos (nome, descricao, data, autor_id)
+VALUES ('Evento de teste', 'Descrição do evento de teste', '2023-01-01', 1);
+
 .exit
